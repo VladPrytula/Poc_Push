@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+
+    <persistence-unit name="chapter04PU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>org.ghostwheel.jee7book.chapter04.Book</class>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action"
+                      value="drop-and-create"/>
+            <property name="javax.persistence.jdbc.password" value="root"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/chapter04"/>
+            <property name="javax.persistence.sql-load-script-source"
+                      value="insert.sql" />
+            <property name="eclipselink.logging.level" value="FINEST"/>
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="chapter04TestPU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>org.ghostwheel.jee7book.chapter04.Book</class>
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action"
+                      value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.action"
+                      value="drop-and-create"/>
+            <property name="javax.persistence.schema-generation.scripts.create-target" value="mycreate.ddl"/>
+            <property name="javax.persistence.schema-generation.scripts.drop-target" value="mydrop.ddl"/>
+            <property name="javax.persistence.jdbc.driver" value="org.apache.derby.jdbc.EmbeddedDriver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:derby:memory:chapter04;create=true"/>
+            <property name="javax.persistence.sql-load-script-source"
+                      value="insert.sql" />
+            <property name="eclipselink.logging.level" value="FINEST"/>
+        </properties>
+    </persistence-unit>
+
+        <persistence-unit name="mongoDBUnit" transaction-type="RESOURCE_LOCAL">
+            <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+            <exclude-unlisted-classes>false</exclude-unlisted-classes>
+            <properties>
+                <property name="eclipselink.target-database" value="org.eclipse.persistence.nosql.adapters.mongo.MongoPlatform"/>
+                <property name="eclipselink.nosql.connection-spec" value="org.eclipse.persistence.nosql.adapters.mongo.MongoConnectionSpec"/>
+                <property name="eclipselink.nosql.property.mongo.port" value="27017, 27017"/>
+                <property name="eclipselink.nosql.property.mongo.host" value="host1, host2"/>
+                <property name="eclipselink.nosql.property.mongo.db" value="acme"/>
+            </properties>
+        </persistence-unit>
+
+</persistence>

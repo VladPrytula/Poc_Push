@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false">
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/entity/Invoice.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/entity/User.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/sender/Constants.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/sender/InvalidRequestException.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/sender/Message.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/sender/MulticastResult.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/sender/Result.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/sender/Sender.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/ApiKeyInitializer.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/BaseServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/Datastore.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/HomeServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/RegisterServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/SendAllMessagesServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/SendServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/UnregisterServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/webapp" charset="UTF-8" />
+  </component>
+</project>
+

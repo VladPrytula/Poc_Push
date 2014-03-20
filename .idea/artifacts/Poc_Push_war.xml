@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="Poc_Push:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="Poc_Push-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="Poc_Push:war exploded" />
+    </root>
+  </artifact>
+</component>
