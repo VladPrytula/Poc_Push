@@ -1,3 +1,5 @@
+package com.google.android.gcm.demo;
+
 import com.google.android.gcm.demo.entity.User;
 import org.junit.After;
 import org.junit.Assert;
@@ -8,10 +10,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
-import javax.validation.ConstraintViolationException;
-import java.util.List;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 /**
@@ -19,7 +18,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class userIT {
 
-        private static EntityManagerFactory emf =  Persistence.createEntityManagerFactory("chapter04TestPU");
+        private static EntityManagerFactory emf =  Persistence.createEntityManagerFactory("mongoDBUnit2");
 
         private EntityManager em;
         private EntityTransaction tx;

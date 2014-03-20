@@ -6,7 +6,7 @@ import org.eclipse.persistence.nosql.annotations.NoSql;
 
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 /**
  * Created by arkadii.tetelman on 3/13/14.
@@ -18,20 +18,21 @@ public class Invoice {
 
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Field(name = "invoiceId")
+	@Column(name = "invoiceId",unique=true, nullable=false)
 	long invoiceId;
 
-	@Basic
+	@Column
 	private String invoiceName;
-	@Basic
+	@Column
     private Double invoiceAmount;
-	@Basic
+	@Column
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date invoiceSubmitedTS;
-	@Basic
+	@Column
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date invoiceCompletedTS;
-	@Column
+    @ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="userId")
     private  User user;
 
 	public Invoice() {

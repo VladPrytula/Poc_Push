@@ -6,7 +6,7 @@ import org.eclipse.persistence.nosql.annotations.NoSql;
 
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
+
 
 /** * Created by arkadii.tetelman on 3/19/14. */
 @Entity
@@ -14,14 +14,13 @@ import javax.validation.constraints.NotNull;
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Field(name = "userId")
+	@Column(name = "userId",unique=true, nullable=false)
 	private long userId;
-	@Basic
+	@Column
 	private String userEmail;
-	@Basic
+	@Column
 	private String userPassword;
-	@Basic
-    @NotNull
+	@Column
 	private String googleAPIKey;
 
 	public User(long userId, String userEmail, String userPassword,

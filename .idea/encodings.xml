@@ -17,6 +17,7 @@
     <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/SendAllMessagesServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/SendServlet.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java/com/google/android/gcm/demo/server/UnregisterServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/webapp" charset="UTF-8" />
   </component>
 </project>
