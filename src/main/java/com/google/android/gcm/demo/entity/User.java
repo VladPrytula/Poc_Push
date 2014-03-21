@@ -10,17 +10,17 @@ import javax.persistence.*;
 
 /** * Created by arkadii.tetelman on 3/19/14. */
 @Entity
-@NoSql(dataFormat= DataFormatType.MAPPED)
+@NoSql(dataFormat= DataFormatType.MAPPED,dataType="user")
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "userId",unique=true, nullable=false)
+	@Field(name = "userId")
 	private long userId;
-	@Column
+	@Basic
 	private String userEmail;
-	@Column
+	@Basic
 	private String userPassword;
-	@Column
+	@Basic
 	private String googleAPIKey;
 
 	public User(long userId, String userEmail, String userPassword,

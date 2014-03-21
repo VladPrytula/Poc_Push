@@ -2,6 +2,7 @@ package com.google.android.gcm.demo.entity;
 
 import org.eclipse.persistence.nosql.annotations.DataFormatType;
 import org.eclipse.persistence.nosql.annotations.Field;
+import org.eclipse.persistence.nosql.annotations.JoinField;
 import org.eclipse.persistence.nosql.annotations.NoSql;
 
 
@@ -13,26 +14,26 @@ import java.util.Date;
  */
 
 @Entity
-@NoSql(dataFormat= DataFormatType.MAPPED)
+@NoSql(dataFormat= DataFormatType.MAPPED,dataType="invoice")
 public class Invoice {
 
     @Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "invoiceId",unique=true, nullable=false)
+	@Field(name = "invoiceId")
 	long invoiceId;
 
-	@Column
+	@Basic
 	private String invoiceName;
-	@Column
+    @Basic
     private Double invoiceAmount;
-	@Column
+    @Basic
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date invoiceSubmitedTS;
-	@Column
+    @Basic
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date invoiceCompletedTS;
-    @ManyToOne(fetch=FetchType.LAZY)
-    @JoinColumn(name="userId")
+    @ManyToOne
+    @JoinField(name="userId")
     private  User user;
 
 	public Invoice() {
